@@ -1,0 +1,137 @@
+// bower:scss
+// endbower
+
+@import "main";
+
+
+.content-box{
+  
+  &__works{
+    padding: 0 5px 20px 5px;
+  }
+  
+}
+
+.works{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.thumbnail{
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 0 10px;
+  width: 33.3333333%;
+  margin-bottom: 40px;
+
+  &__site-preview{
+    text-align: center;
+    height: 125px;
+    // width: 179px;
+    overflow: hidden;
+    border: 2px solid $site-preview-img-border-bg;
+    border-radius: $site-preview-img-border-radius;
+    position: relative; //for background of img
+    cursor: pointer;
+    
+    &:before{
+      content: '';
+      background-color: rgb(1, 108, 164);
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      // opacity: 1.0;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 100ms; 
+    }
+    
+    &:hover:before{
+      opacity: 0.75;
+    }
+    
+    &:hover:after{
+      content: 'название';
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 2.5px solid #eff3f7;
+      border-radius: 4px;
+      color: #eff3f7;
+      padding: 0px 4.5px;
+      font-size: 12px;
+    }
+    
+    // TODO: Причесать
+    &_plate-add-site{
+      background-color: rgba(236, 251, 255, 0.64);
+      border: 1px dashed #3ba8c0;
+      
+      &:hover{
+        border: 2px solid $site-preview-img-border-bg;
+      }
+
+      &:hover:before{
+        opacity: 0;
+      }
+
+      &:hover:after{
+        font-size: 0px;
+        border: none;
+      }
+      
+    }
+  }
+
+  &__site-name{
+    font-family: fira_sanslight_italic;
+    font-size: 13px;
+    color: $thumbnail-site-name-color;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__site-description{
+    color: $thumbnail-site-description-color;
+    font-family: fira_sanslight;
+    font-size: 15px;
+  }
+}
+
+.site-preview__img{
+  // max-width: 100%;
+  // max-height: 100%;
+  height: 100%;    
+    width: 100%;
+  object-fit: cover;
+  // display: block;
+}
+
+.plate-add-site{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.plate-add-site__logo{
+  @include sprite($image-add);
+  display: inline-block;
+}
+
+.plate-add-site__legend{
+  font-family: fira_sanslight;
+  font-size: 13px;
+  color: $thumbnail-site-description-color;
+}

@@ -1,0 +1,272 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$course-name: 'course';
+$course-x: 147px;
+$course-y: 34px;
+$course-offset-x: -147px;
+$course-offset-y: -34px;
+$course-width: 26px;
+$course-height: 32px;
+$course-total-width: 179px;
+$course-total-height: 170px;
+$course-image: 'sprite.png';
+$course: (147px, 34px, -147px, -34px, 26px, 32px, 179px, 170px, 'sprite.png', 'course', );
+$education-name: 'education';
+$education-x: 0px;
+$education-y: 147px;
+$education-offset-x: 0px;
+$education-offset-y: -147px;
+$education-width: 41px;
+$education-height: 23px;
+$education-total-width: 179px;
+$education-total-height: 170px;
+$education-image: 'sprite.png';
+$education: (0px, 147px, 0px, -147px, 41px, 23px, 179px, 170px, 'sprite.png', 'education', );
+$facebook-deafault-name: 'facebook-deafault';
+$facebook-deafault-x: 98px;
+$facebook-deafault-y: 49px;
+$facebook-deafault-offset-x: -98px;
+$facebook-deafault-offset-y: -49px;
+$facebook-deafault-width: 47px;
+$facebook-deafault-height: 47px;
+$facebook-deafault-total-width: 179px;
+$facebook-deafault-total-height: 170px;
+$facebook-deafault-image: 'sprite.png';
+$facebook-deafault: (98px, 49px, -98px, -49px, 47px, 47px, 179px, 170px, 'sprite.png', 'facebook-deafault', );
+$facebook-hover-name: 'facebook-hover';
+$facebook-hover-x: 0px;
+$facebook-hover-y: 49px;
+$facebook-hover-offset-x: 0px;
+$facebook-hover-offset-y: -49px;
+$facebook-hover-width: 47px;
+$facebook-hover-height: 47px;
+$facebook-hover-total-width: 179px;
+$facebook-hover-total-height: 170px;
+$facebook-hover-image: 'sprite.png';
+$facebook-hover: (0px, 49px, 0px, -49px, 47px, 47px, 179px, 170px, 'sprite.png', 'facebook-hover', );
+$gihtub-deafault-name: 'gihtub-deafault';
+$gihtub-deafault-x: 49px;
+$gihtub-deafault-y: 49px;
+$gihtub-deafault-offset-x: -49px;
+$gihtub-deafault-offset-y: -49px;
+$gihtub-deafault-width: 47px;
+$gihtub-deafault-height: 47px;
+$gihtub-deafault-total-width: 179px;
+$gihtub-deafault-total-height: 170px;
+$gihtub-deafault-image: 'sprite.png';
+$gihtub-deafault: (49px, 49px, -49px, -49px, 47px, 47px, 179px, 170px, 'sprite.png', 'gihtub-deafault', );
+$gihtub-hover-name: 'gihtub-hover';
+$gihtub-hover-x: 98px;
+$gihtub-hover-y: 0px;
+$gihtub-hover-offset-x: -98px;
+$gihtub-hover-offset-y: 0px;
+$gihtub-hover-width: 47px;
+$gihtub-hover-height: 47px;
+$gihtub-hover-total-width: 179px;
+$gihtub-hover-total-height: 170px;
+$gihtub-hover-image: 'sprite.png';
+$gihtub-hover: (98px, 0px, -98px, 0px, 47px, 47px, 179px, 170px, 'sprite.png', 'gihtub-hover', );
+$image-add-name: 'image-add';
+$image-add-x: 147px;
+$image-add-y: 0px;
+$image-add-offset-x: -147px;
+$image-add-offset-y: 0px;
+$image-add-width: 32px;
+$image-add-height: 32px;
+$image-add-total-width: 179px;
+$image-add-total-height: 170px;
+$image-add-image: 'sprite.png';
+$image-add: (147px, 0px, -147px, 0px, 32px, 32px, 179px, 170px, 'sprite.png', 'image-add', );
+$job-name: 'job';
+$job-x: 98px;
+$job-y: 98px;
+$job-offset-x: -98px;
+$job-offset-y: -98px;
+$job-width: 36px;
+$job-height: 34px;
+$job-total-width: 179px;
+$job-total-height: 170px;
+$job-image: 'sprite.png';
+$job: (98px, 98px, -98px, -98px, 36px, 34px, 179px, 170px, 'sprite.png', 'job', );
+$logged-off-name: 'logged-off';
+$logged-off-x: 147px;
+$logged-off-y: 102px;
+$logged-off-offset-x: -147px;
+$logged-off-offset-y: -102px;
+$logged-off-width: 20px;
+$logged-off-height: 32px;
+$logged-off-total-width: 179px;
+$logged-off-total-height: 170px;
+$logged-off-image: 'sprite.png';
+$logged-off: (147px, 102px, -147px, -102px, 20px, 32px, 179px, 170px, 'sprite.png', 'logged-off', );
+$logged-on-name: 'logged-on';
+$logged-on-x: 147px;
+$logged-on-y: 68px;
+$logged-on-offset-x: -147px;
+$logged-on-offset-y: -68px;
+$logged-on-width: 20px;
+$logged-on-height: 32px;
+$logged-on-total-width: 179px;
+$logged-on-total-height: 170px;
+$logged-on-image: 'sprite.png';
+$logged-on: (147px, 68px, -147px, -68px, 20px, 32px, 179px, 170px, 'sprite.png', 'logged-on', );
+$mail-name: 'mail';
+$mail-x: 86px;
+$mail-y: 147px;
+$mail-offset-x: -86px;
+$mail-offset-y: -147px;
+$mail-width: 21px;
+$mail-height: 16px;
+$mail-total-width: 179px;
+$mail-total-height: 170px;
+$mail-image: 'sprite.png';
+$mail: (86px, 147px, -86px, -147px, 21px, 16px, 179px, 170px, 'sprite.png', 'mail', );
+$phone-name: 'phone';
+$phone-x: 65px;
+$phone-y: 147px;
+$phone-offset-x: -65px;
+$phone-offset-y: -147px;
+$phone-width: 19px;
+$phone-height: 20px;
+$phone-total-width: 179px;
+$phone-total-height: 170px;
+$phone-image: 'sprite.png';
+$phone: (65px, 147px, -65px, -147px, 19px, 20px, 179px, 170px, 'sprite.png', 'phone', );
+$skype-name: 'skype';
+$skype-x: 43px;
+$skype-y: 147px;
+$skype-offset-x: -43px;
+$skype-offset-y: -147px;
+$skype-width: 20px;
+$skype-height: 20px;
+$skype-total-width: 179px;
+$skype-total-height: 170px;
+$skype-image: 'sprite.png';
+$skype: (43px, 147px, -43px, -147px, 20px, 20px, 179px, 170px, 'sprite.png', 'skype', );
+$tw-deafault-name: 'tw-deafault';
+$tw-deafault-x: 49px;
+$tw-deafault-y: 0px;
+$tw-deafault-offset-x: -49px;
+$tw-deafault-offset-y: 0px;
+$tw-deafault-width: 47px;
+$tw-deafault-height: 47px;
+$tw-deafault-total-width: 179px;
+$tw-deafault-total-height: 170px;
+$tw-deafault-image: 'sprite.png';
+$tw-deafault: (49px, 0px, -49px, 0px, 47px, 47px, 179px, 170px, 'sprite.png', 'tw-deafault', );
+$tw-hover-name: 'tw-hover';
+$tw-hover-x: 0px;
+$tw-hover-y: 98px;
+$tw-hover-offset-x: 0px;
+$tw-hover-offset-y: -98px;
+$tw-hover-width: 47px;
+$tw-hover-height: 47px;
+$tw-hover-total-width: 179px;
+$tw-hover-total-height: 170px;
+$tw-hover-image: 'sprite.png';
+$tw-hover: (0px, 98px, 0px, -98px, 47px, 47px, 179px, 170px, 'sprite.png', 'tw-hover', );
+$vk-deafault-name: 'vk-deafault';
+$vk-deafault-x: 49px;
+$vk-deafault-y: 98px;
+$vk-deafault-offset-x: -49px;
+$vk-deafault-offset-y: -98px;
+$vk-deafault-width: 47px;
+$vk-deafault-height: 47px;
+$vk-deafault-total-width: 179px;
+$vk-deafault-total-height: 170px;
+$vk-deafault-image: 'sprite.png';
+$vk-deafault: (49px, 98px, -49px, -98px, 47px, 47px, 179px, 170px, 'sprite.png', 'vk-deafault', );
+$vk-hover-name: 'vk-hover';
+$vk-hover-x: 0px;
+$vk-hover-y: 0px;
+$vk-hover-offset-x: 0px;
+$vk-hover-offset-y: 0px;
+$vk-hover-width: 47px;
+$vk-hover-height: 47px;
+$vk-hover-total-width: 179px;
+$vk-hover-total-height: 170px;
+$vk-hover-image: 'sprite.png';
+$vk-hover: (0px, 0px, 0px, 0px, 47px, 47px, 179px, 170px, 'sprite.png', 'vk-hover', );
+$spritesheet-width: 179px;
+$spritesheet-height: 170px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($course, $education, $facebook-deafault, $facebook-hover, $gihtub-deafault, $gihtub-hover, $image-add, $job, $logged-off, $logged-on, $mail, $phone, $skype, $tw-deafault, $tw-hover, $vk-deafault, $vk-hover, );
+$spritesheet: (179px, 170px, 'sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(../images/#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

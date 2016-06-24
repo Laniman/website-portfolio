@@ -1,0 +1,85 @@
+// Variables
+
+//== Colors
+
+$gray-base:        #000 !default;
+$gray-darker:      lighten( saturate( adjust-hue( $gray-base, 210deg ), 16 ), 41 ) !default; // #58697a
+$gray:             lighten( saturate( adjust-hue( $gray-base, 224deg ), 10 ), 62 ) !default; // #959aa8
+$gray-lighter:     lighten( saturate( adjust-hue( $gray-base, 210deg ), 33 ), 95 ) !default; // #eff3f7
+
+$white:            #fff !default;
+
+$brand-primary:    #48cbe8 !default;
+$brand-darker:     darken( desaturate( $brand-primary, 25 ), 11 ) !default; //#3ba8c0
+$brand-dark:       darken( desaturate( $brand-primary, 15 ), 6 ) !default; //#41b9d4
+$brand-light:      lighten( saturate( $brand-primary, 14 ), 5 ) !default; //#51daf8
+$brand-lighter:    lighten( desaturate( adjust-hue( $brand-primary, 5deg ), 7 ), 36 ) !default; //#edf8fc
+
+$fg:               $gray-lighter !default;
+
+
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+/* $navbar-height:                    50px !default; */
+/* $navbar-margin-bottom:             $line-height-computed !default; */
+/* $navbar-border-radius:             $border-radius-base !default; */
+/* $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default; */
+/* $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default; */
+/* $navbar-collapse-max-height:       340px !default; */
+$navbar-default-color:             $brand-darker !default;
+$navbar-default-bg:                $fg !default;
+// $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+
+// Navbar links
+$navbar-default-link-color:                $brand-darker !default;
+// $navbar-default-link-hover-color:          $brand-darker !default;
+// $navbar-default-link-hover-bg:             $brand-darker !default;
+$navbar-default-link-active-color:         $white !default;
+$navbar-default-link-active-bg:            $brand-darker !default;
+// $navbar-default-link-disabled-color:       #ccc !default;
+// $navbar-default-link-disabled-bg:          transparent !default;
+
+// Navbar brand label
+// $navbar-default-brand-color:               $navbar-default-link-color !default;
+// $navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
+// $navbar-default-brand-hover-bg:            transparent !default;
+
+// Navbar toggle
+// $navbar-default-toggle-hover-bg:           #ddd !default;
+// $navbar-default-toggle-icon-bar-bg:        #888 !default;
+// $navbar-default-toggle-border-color:       #ddd !default;
+$border-radius-base:        3px !default;
+
+$content-box-bg: $fg !default;
+$content-box-header-color: $brand-darker !default;
+$content-box-header-underline-bg: $brand-darker !default;
+$content-box-header-font-size: 27px;
+
+$avatar-border-bg: $brand-darker;
+
+$skills-item-border-radius: $border-radius-base;
+$skills-item-gradient1-bg: $brand-darker;
+$skills-item-gradient2-bg: darken($brand-darker, 10);
+$skills-item-color: $white;
+
+
+
+$navbar-item-underline-bg: $brand-darker !default;
+
+
+$contacts-color: $white;
+$contacts-title-bg: $brand-darker;
+$contacts-mail-bg: $brand-dark;
+$contacts-phone-bg: $brand-primary;
+$contacts-skype-bg: $brand-light;
+
+
+$site-preview-img-border-bg: $brand-darker;
+$site-preview-img-border-radius: $border-radius-base +1px;
+
+$thumbnail-site-name-color: $brand-darker;
+$thumbnail-site-description-color: $gray-darker;
+

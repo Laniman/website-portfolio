@@ -3,4 +3,56 @@
 
 @import "main";
 
+.authorization-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.authorization{
+  max-width: 590px;
+  width: 100%;
+  text-align: center;
+  background-color: #eff3f7;
+  font-family: fira_sanslight;
+  border-radius: 3px;
+  box-shadow: 0 4px 6.9px 0.1px rgba(13, 16, 7, 0.29);
+  overflow: hidden;
+}
+
+.authorization-header{
+  font-family: fira_sansbook;
+  background-color: #48cbe8;
+  color: white;
+  margin: 0;
+  border-bottom: 15px solid #67dffa;
+  font-size: 40px;
+  padding: 25px 0;
+}
+
+.authorization-body{
+  padding: 28px 83px 23px 83px;
+}
+
+.form-line{
+  margin-bottom: 20px;
+
+  &:last-of-type{
+    margin-bottom: 35px;
+  }
+}
+
+.label-big{
+  font-size: 36px;
+}
+
+.input-big{
+  font-size: 17px;
+  padding: 10px;
+}
+
+.btn{
+  font-size: 36px;
+  max-width: 226px;
+}
 

@@ -1,0 +1,68 @@
+@import "main";
+
+.aboutbox-header{
+  font-family: fira_sansbook;
+  font-size: 27px;
+  color: white;
+  text-align: center;
+
+  background-color: #48cbe8;
+  border-bottom: 15px solid #67dffa;
+  border-radius: 3px;
+
+  margin: 0;
+  padding: 30px;
+}
+
+.aboutbox-body{
+  padding: 45px 120px 190px;
+  text-align: left;
+  background-color: #eff3f7;
+}
+
+.form-group{
+  min-width: 47.5%;
+}
+
+.captcha-wrap{
+  width: 100%;
+}
+
+.captcha{
+  width: 47.5%;
+  padding: 10px;
+  background-color: #fbfcfd;
+  border: 1px solid #48cbe8;
+  border-radius: 4px;
+  text-align: center;
+  height: 80px;
+}
+
+.input-captcha{
+  width: 47.5%;
+  margin-top: 18.5px;
+}
+
+.button-group{
+  
+  button[type='submit']{
+    float: left;
+    width: auto;
+  }
+
+  button[type="reset"]{
+    float: right;
+    width: auto;
+  }
+}
+
+.btn{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+
+
+
+
+

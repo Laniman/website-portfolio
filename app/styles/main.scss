@@ -8,10 +8,18 @@
 @import "../fonts/fira/fira.css";
 @import "../fonts/Proxima-Nova/Proxima-Nova.css";
 
-// COMMON //
+// ОБЩИЕ СТИЛИ //
+
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+}
 
 ul{
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .browserupgrade {
@@ -21,17 +29,11 @@ ul{
   padding: 0.2em 0;
 }
 
-*,
-*:before,
-*:after{
-  box-sizing: border-box;
-}
-
 html {
   height: 100%;
 }
 
-body {
+.page {
   font-family: fira_sansbook, sans-serif;
   background: url('../images/background.png') repeat;
   margin: 0;
@@ -41,24 +43,117 @@ body {
   flex-direction: column;
 }
 
-.wrap{
-  max-width: 940px;
-  margin: 0 auto;
+.clearfix{
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
-.section__content{
-  padding-top: 20px;
-  padding-bottom: 20px;
+.pull-left{
+  float: left;
+}
+
+.pull-right{
+  float: right;
+}
+
+// СТИЛИ ЭЛЕМЕНТОВ //
+
+.form-line{
+  margin-bottom: 15px;
+}
+
+.label{
+  color: $label-color;
+  font-size: $label-font-size;
+  display: block;
+}
+
+.input{
+  border: $input-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+  color: $input-color;
+  font-size: $input-font-size;
+  font-family: fira_sanslight;
+  width: 100%;
+  line-height: 41px;
+  padding: 0 10px;
 }
 
 
+
+.textarea{
+  background-color: $textarea-background-color;
+  border: $textarea-border-width solid $textarea-border-color;
+  border-radius: $textarea-border-radius;
+  color: $textarea-color;
+  font-family: fira_sanslight;
+  font-size: $textarea-font-size;
+  resize: none;
+  width: 100%;
+  padding: 10px;
+}
+
+.btn{
+  background-color: #48cbe8;
+  border-radius: $button-border-radius;
+  color: $button-color;
+  font-family: fira_sansbook;
+  font-size: $button-font-size;
+  width: 100%;
+  padding: $button-delta 0;
+  border: none;
+  box-shadow: 0 $button-delta 0 0 $button-box-shadow-color;
+  outline: none;
+  transition: box-shadow .1s, transform .1s, padding .1s;
+
+  &:hover{
+    box-shadow: 0 0;
+    transform: translateY($button-delta);
+  }
+
+  &:active{
+    box-shadow: inset 0 $button-delta 0 0 $button-box-shadow-color;
+    padding-top: $button-delta2;
+    padding-bottom: 0;
+    transform: translateY($button-delta);
+  }
+}
+
+.btn-res{
+  background-color: $button-res-background-color;
+  box-shadow: 0 $button-delta 0 0 $button-res-box-shadow-color;
+
+  &:hover{
+    box-shadow: 0 0;
+  }
+
+  &:active{
+    box-shadow: inset 0 $button-delta 0 0 $button-res-box-shadow-color;
+  }
+}
+
+.has-error{
+  background-color: rgba(249, 126, 118, 0.33);
+  border-color: #f97e76;
+}
+
+.qtip-mystyle{
+  color: white;
+  font-size: 13px;
+  background-color: #f97e76;
+}
 
 /*            *\
      HEADER     
 \*            */
 
-.section_header{
+.header{
   background-color: $fg;
+  margin-bottom: 40px;
+
   &:after{
     content: '';
     display: block;
@@ -68,26 +163,35 @@ body {
   }
 }
 
-.section__content{
-  &_header{
-    padding: 35px 100px;
-  } 
+.container-big{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 35px 0;
 }
+
+.header__logo{
+  float: left;
+}
+
 .header__socials{
-  // list-style-type: none;
-  padding: 0;
-  margin: 0;
   float: right;
+}
+
+.socials{
+  font-size: 0;
 }
 
 .socials-item{
   display: inline-block;
   padding: 0 12px;
+
   &:first-child{
     padding-left: 0;
-  }&:last-child{
-    padding-right: 0;
   }
+
+  &:last-child{
+     padding-right: 0;
+   }
 }
 
 .socials-link{
@@ -108,18 +212,52 @@ body {
   }
 }
 
+.mobile-nav{
+  color: #00DD00;
+  float: right;
+  display: none;
+  //display: table-cell;
+  height: 47px;
+  line-height: 47px;
+  width: 47px;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: 50px;
+  position: relative; //for absolute position of navigation
+}
+
 /*            *\
      CONTENT     
 \*            */
 
-.section_main-content{
+.main{
   flex: 1;
+  margin-bottom: 40px;
 }
 
-.section__content{
-  &_main{
-    padding: 40px 0;
-  } 
+.container{
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// Стили САЙДБАРА //
+
+.sidebar{
+  float: left;
+  width: 250px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.navigation{
+  @media (max-width: 768px) {
+    position: absolute;
+    right: 0;
+    display: block;
+  }
 }
 
 .navigation-list{
@@ -129,15 +267,14 @@ body {
   overflow: hidden;
   background-color: $navbar-default-bg;
   font-family: fira_sansbook;
-  font-size: 20px;
-
+  font-size: 21px;
 }
 
 .navigation-item{
 
   &_current{
     background-color: $navbar-default-link-active-bg;
-    
+
     .navigation-link{
       color: $navbar-default-link-active-color;
       font-size: 23px;
@@ -161,26 +298,6 @@ body {
   vertical-align: middle;
   border-radius: $border-radius-base;
   overflow: hidden;
-
-  &-item{
-    padding-left: 30px;
-    padding-right: 30px;
-    line-height: 40px;
-
-    &:before{
-      margin-right: 10px;
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
-
-  .link-to-connection{
-    color: inherit;
-    text-decoration: inherit;
-    &:hover{
-      text-decoration: underline;
-    }
-  }
 
   &__title{
     background-color: $contacts-title-bg;
@@ -210,50 +327,91 @@ body {
   }
 }
 
+.contacts-item{
+  padding: 0 20px;
+  line-height: 40px;
+
+  &:before{
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+
+.link-to-connection{
+  color: inherit;
+  text-decoration: inherit;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+
+// Стили КОНТЕНТА //
+
+.content{
+  float: right;
+  max-width: 650px;
+  width: 100%;
+
+}
+
+// КОНТЕНТ страницы "ОБО МНЕ"//
+
 .content-box{
   background-color: $content-box-bg;
   border-radius: $border-radius-base;
   font-family: fira_sansbook;
   margin-bottom: 25px;
+
   &:last-child{
     margin-bottom: 0;
   }
+
   &__header{
     display: inline-block;
     padding: 20px 26px 20px 22px;
-    margin-bottom:24px;
+    //margin-bottom: 25px;
     color: $content-box-header-color;
     border-bottom: 2px solid $content-box-header-underline-bg;
     font-size: $content-box-header-font-size;
   }
-  &__personal-info{
-    padding: 0 30px 46px 30px;
+
+  &__body{
+    padding: 25px 25px 25px 25px;
   }
-  
 }
 
 .personal-info{
   display: flex;
-
-  &__worksheet{
-    margin-left: 23px;
-  }
+  max-width: 540px;
+  margin: 0 auto;
 }
 
-
+.personal-info__avatar{
+  font-size: 0;
+  margin-top: 20px;
+}
 
 .avatar{
   width: 150px;
   height: 150px;
+
   border-radius: 50% 50%;
   overflow: hidden;
   text-align: center;
   border: 3px solid $avatar-border-bg;
   display: inline-block;
+
   &__img{
     width: 100%;
     height: auto;
   }
+}
+
+.personal-info__worksheet{
+  margin-left: 23px;
 }
 
 .worksheet-list{
@@ -263,13 +421,16 @@ body {
 
 .worksheet-item{
   display: flex;
+  margin-bottom: 15px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
 }
 
 .worksheet-what{
   margin-right: 18px;
   font-family: fira_sansmedium;
-  // text-align: right;
-  // flex: 1;
 }
 
 .worksheet-info{
@@ -279,7 +440,6 @@ body {
 .skills-list{
   margin: 0;
   padding: 0;
-  // display: flex;
 }
 
 .skills-item{
@@ -302,6 +462,8 @@ body {
 .work-list{
   margin: 0;
   padding: 0;
+  max-width: 540px;
+  margin: 0 auto;
 }
 
 .work-item{
@@ -347,17 +509,12 @@ body {
      FOOTER     
 \*            */
 
-.section__content{
-  &_footer{
-    padding: 22px 0;
-  } 
-}
-
-.section_footer {
+.footer {
   background-color: #eff3f7;
   text-align: center;
   font-family: fira_sanslight;
   font-size: 13px;
+
   &:before{
     content: '';
     display: block;
@@ -365,6 +522,15 @@ body {
     background-color: #1c667a;
     background-image: linear-gradient(to right, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 50%, rgba(242, 246, 250, 0.9) 100%);
   }
+}
+
+.footer__body{
+  padding: 22px 0;
+}
+
+.lock{
+  float: left;
+  font-size: 0;
 }
 
 .lock-inner{
@@ -379,12 +545,10 @@ body {
   }
 }
 
-.footer__lock{
+.copyright{
   vertical-align: middle;
-}
-
-.footer__copyright{
-  vertical-align: middle;
+  display: inline-block;
+  line-height: 32px;
 }
 
 

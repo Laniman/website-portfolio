@@ -17,10 +17,9 @@ $brand-lighter:    lighten( desaturate( adjust-hue( $brand-primary, 5deg ), 7 ),
 
 $fg:               $gray-lighter !default;
 
+$border-radius-base:        3px !default;
 
-//== Navbar
-//
-//##
+// Navbar
 
 // Basics of a navbar
 /* $navbar-height:                    50px !default; */
@@ -51,35 +50,69 @@ $navbar-default-link-active-bg:            $brand-darker !default;
 // $navbar-default-toggle-hover-bg:           #ddd !default;
 // $navbar-default-toggle-icon-bar-bg:        #888 !default;
 // $navbar-default-toggle-border-color:       #ddd !default;
-$border-radius-base:        3px !default;
 
+
+$navbar-item-underline-bg: $brand-darker !default;
+
+//Content-box
 $content-box-bg: $fg !default;
 $content-box-header-color: $brand-darker !default;
 $content-box-header-underline-bg: $brand-darker !default;
 $content-box-header-font-size: 27px;
 
+//Avatar
 $avatar-border-bg: $brand-darker;
 
+//Skills-item
 $skills-item-border-radius: $border-radius-base;
 $skills-item-gradient1-bg: $brand-darker;
 $skills-item-gradient2-bg: darken($brand-darker, 10);
 $skills-item-color: $white;
 
-
-
-$navbar-item-underline-bg: $brand-darker !default;
-
-
+//Contacts
 $contacts-color: $white;
 $contacts-title-bg: $brand-darker;
 $contacts-mail-bg: $brand-dark;
 $contacts-phone-bg: $brand-primary;
 $contacts-skype-bg: $brand-light;
 
+//Labels
+$label-color: #959aa8;
+$label-font-size: 17px;
 
+//Inputs
+$input-background-color: #fbfcfd;
+$input-border-color: #48cbe8;
+$input-border-width: 1px;
+$input-border-radius: 4px;
+$input-color: #48cbe8;
+$input-font-size: 13px;
+
+//Textarea
+$textarea-background-color: $input-background-color;
+$textarea-border-color: $input-border-color;
+$textarea-border-width: $input-border-width;
+$textarea-border-radius: $input-border-radius;
+$textarea-color: $input-color;
+$textarea-font-size: $input-font-size;
+
+//Buttons
+$button-background-color: $brand-primary;
+$button-border-radius: 7px;
+$button-color: #f6f6f6;
+$button-font-size: 19px;
+$button-box-shadow-color: #3ba8c0;
+$button-delta: 4px;
+$button-delta2: $button-delta*2;
+
+$button-res-background-color: #849db5;
+$button-res-box-shadow-color: #687b8f;
+
+//Site-preview
 $site-preview-img-border-bg: $brand-darker;
 $site-preview-img-border-radius: $border-radius-base +1px;
 
+//Thumbnails
 $thumbnail-site-name-color: $brand-darker;
 $thumbnail-site-description-color: $gray-darker;
 

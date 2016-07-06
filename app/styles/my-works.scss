@@ -3,15 +3,6 @@
 
 @import "main";
 
-
-.content-box{
-  
-  &__works{
-    padding: 0 5px 20px 5px;
-  }
-  
-}
-
 .works{
   display: flex;
   flex-wrap: wrap;
@@ -71,7 +62,6 @@
       font-size: 12px;
     }
     
-    // TODO: Причесать
     &_plate-add-site{
       background-color: rgba(236, 251, 255, 0.64);
       border: 1px dashed #3ba8c0;
@@ -111,7 +101,7 @@
   // max-width: 100%;
   // max-height: 100%;
   height: 100%;    
-    width: 100%;
+  width: 100%;
   object-fit: cover;
   // display: block;
 }
@@ -134,4 +124,136 @@
   font-family: fira_sanslight;
   font-size: 13px;
   color: $thumbnail-site-description-color;
+}
+
+
+
+#new-project-popup{
+  display: none;
+}
+
+.modal-wrapper{
+  font-family: fira_sansbook;
+  width: 362px;
+}
+
+.modal-header{
+  background-color: #48cbe8;
+  border-bottom: 9px solid #67dffa;
+  padding: 10px 35px 6px 25px;
+  position: relative;
+}
+
+.b-close{
+  background: url('../images/button-close.svg') no-repeat;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-title{
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: fira_sansregular;
+  font-size: 25px;
+}
+
+.modal-wrapper{
+  border-radius: 3px;
+  box-shadow: 0 6px 12.5px 0.5px rgba(13, 16, 7, 0.35);
+}
+
+.modal-body{
+  background-color: #eff3f7;
+  padding: 12px 20px;
+}
+
+.form-group{
+  margin-bottom: 12px;
+}
+
+.server-mes{
+  display: none;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 5px;
+
+  &:after{
+    content: '';
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    float: right;
+  }
+}
+
+.error-mes{
+  background-color: rgba(249, 126, 118, 0.33);
+  border: 1px solid #f97e76;
+  color: #f97e76;
+  margin-bottom: 12px;
+
+  &:after{
+    background: url('../images/message-error-close.svg');
+  } 
+}
+
+.success-mes{
+  background-color: rgba(73, 187, 123, 0.33);
+  border: 1px solid #49bb7b;
+  color: #49bb7b;
+
+  &:after{
+    background: url('../images/message-ok-close.svg');
+  } 
+}
+
+
+
+.fileupload-wrapper{
+  position: relative; /* Даем возможность делать позиционирование, внутри данного элемента */
+  overflow: hidden; /* Все что выходит за пределы - скрываем */
+  width: 100%; /* Задаем ширину кнопки выбора файла */
+  // height: 20px; /* Задаем высоту кнопки выбора файла */ 
+  color: #fff;
+}
+
+.fileupload{
+  display: none;
+}
+
+.fileupload-lable{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 52px;
+  height: 43px;
+  cursor: pointer;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background: url('../images/upload-img.svg') no-repeat center #48cbe8;
+}
+
+#fileurl{
+  padding: 0 62px 0 10px;
+}
+
+.btn-wrapper{
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.btn{
+  max-width: 140px;
+  font-size: 19px;
 }

@@ -11,6 +11,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -23,14 +24,26 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-      
-      <!-- HEADER -->
-      <header class="section section_header">
-        <div class="section__content_header">
-          <a class="header__logo">
-            <img src="images/logo.png" alt="logo" class="logo">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container-big clearfix">
+
+        <!--Блок логотипа-->
+        <div class="header__logo">
+          <a class="logo">
+            <img src="images/logo.png" alt="logo" class="logo-img">
           </a>
-          <ul class="header__socials">
+          </div>
+
+        <!--Скрытый -->
+        <div class="mobile-nav">&#9776;
+          <!--TODO-me Абсолютно спозиционированное меню навигации-->
+        </div>
+
+        <!--Блок соц. кнопок-->
+        <div class="header__socials">
+          <ul class="socials">
             <li class="socials-item">
               <a href="https://new.vk.com/id36748150" class="socials-link socials-link-vk" target="_blank"></a>
             </li>
@@ -39,129 +52,99 @@
             </li>
           </ul>
         </div>
-      </header>
-      <!-- end-header -->
-
-      <!-- CONTENT -->
-      <section class="section section_main-content">
-        <div class="section__content_main">
-          <div class="wrap grid">
-            
-
-            <aside class="main-content__sidebar grid__col grid__col--3-of-12">
-              <nav class="navigation">
-                <ul class="navigation-list">
-                  <li class="navigation-item navigation-item_current">
-                    <a href="./index.html" class="navigation-link">Обо мне</a>
-                  </li>
-                  <li class="navigation-item">
-                    <a href="./my-works.html" class="navigation-link">Мои работы</a>
-                  </li>
-                  <li class="navigation-item">
-                    <a href="./contact-me" class="navigation-link">Связаться со мной</a>
-                  </li>
-                </ul>
-              </nav>
-              <address class="contacts">
-                <div class="contacts-item contacts__title">
-                  Контакты
-                </div>
-                <div class="contacts-item contacts__mail">
-                  <a href="mailto:georgij-net@yandex.ru?subject=Тема сообщения&body=Здравсвуйте, " class="link-to-connection">
-                    georgij-net
-                  </a>
-                </div>
-                <div class="contacts-item contacts__phone"> 
-                  <a href="tel:+79528556793" class="link-to-connection">
-                    +79528556793
-                  </a>
-                </div>
-                <div class="contacts-item contacts__skype">
-                  <a href="skype:georgij-net?call" class="link-to-connection">
-                    georgij-net
-                  </a>
-                </div>
-              </address>
-            </aside>
 
 
-            <div class="main-content__content grid__col grid__col--8-of-12 grid__col--push-1-of-12">
-              <div class="content-box">
-                <div class="content-box__header">
-                  Основная информация
-                </div>
-                <div class="content-box__personal-info">
-                  <div class="personal-info">
-                    <div class="personal-info__avatar">
-                      <div class="avatar">
-                        <img src="images/face.JPG" alt="user photo" class="avatar__img">
-                      </div>
-                    </div>
-                    <div class="personal-info__worksheet">
-                      <ul class="worksheet-list">
-                        <li class="worksheet-item">
-                          <div class="worksheet-what">Меня зовут:</div>
-                          <div class="worksheet-info">Ачкасов Георгий Леонидович</div>
-                        </li>
-                        <li class="worksheet-item">
-                          <div class="worksheet-what">Мой возраст:</div>
-                          <div class="worksheet-info">24 года</div>
-                        </li>
-                        <li class="worksheet-item">
-                          <div class="worksheet-what">Мой город:</div>
-                          <div class="worksheet-info">Санкт-Петербург, Россия</div>
-                        </li>
-                        <li class="worksheet-item">
-                          <div class="worksheet-what">Моя специализация:</div>
-                          <div class="worksheet-info">FRONTEND разработчик</div>
-                        </li>
-                        <li class="worksheet-item">
-                          <div class="worksheet-what">Ключевые навыки:</div>
-                          <div class="worksheet-info skills">
-                            <ul class="skills-list">
-                              <li class="skills-item">html</li>
-                              <li class="skills-item">css</li>
-                              <li class="skills-item">javascript</li>
-                              <li class="skills-item">gulp</li>
-                              <li class="skills-item">git</li>
-                            </ul>
-                              </div>
-                        </li>
-                      </ul>
-                    </div>
+      </div>
+    </header>
+    <!-- end-HEADER -->
+
+    <!--MAIN-BLOCK -->
+    <section class="main ">
+
+      <div class="container clearfix">
+
+        <!--Сайдбар-->
+        <aside class="sidebar">
+
+          <!--Блок навигации-->
+          <nav class="navigation">
+            <ul class="navigation-list">
+              <li class="navigation-item navigation-item_current">
+                <a href="./index.html" class="navigation-link">Обо мне</a>
+              </li>
+              <li class="navigation-item">
+                <a href="./my-works.html" class="navigation-link">Мои работы</a>
+              </li>
+              <li class="navigation-item">
+                <a href="./contact-me.html" class="navigation-link">Связаться со мной</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!--Блок контактов-->
+          <address class="contacts">
+            <div class="contacts-item contacts__title">
+              Контакты
+            </div>
+            <div class="contacts-item contacts__mail">
+              <a href="mailto:georgij-net@yandex.ru?subject=Тема сообщения&body=Здравсвуйте, " class="link-to-connection">
+                georgij-net@yandex.ru
+              </a>
+            </div>
+            <div class="contacts-item contacts__phone">
+              <a href="tel:+79528556793" class="link-to-connection">
+                +79528556793
+              </a>
+            </div>
+            <div class="contacts-item contacts__skype">
+              <a href="skype:georgij-net?call" class="link-to-connection">
+                georgij-net
+              </a>
+            </div>
+          </address>
+        </aside>
+
+        <!--Контент сайта-->
+        <div class="content">
+
+          <!--Блок "Основная информация"-->
+          <div class="content-box">
+            <div class="content-box__header">Основная информация</div>
+            <div class="content-box__body">
+              <div class="personal-info">
+                <div class="personal-info__avatar">
+                  <div class="avatar">
+                    <img src="images/face.JPG" alt="user photo" class="avatar__img">
                   </div>
                 </div>
-              </div>
-
-              <div class="content-box">
-                <div class="content-box__header">Опыт работы</div>
-                <div class="content-box__work-list">
-                  <ul class="work-list">
-                    <li class="work-item work-item_job">
-                      <div class="work-item__body">
-                        <div class="work-item__header">
-                          <abbr title="Краснодарское региональное общественное учреждение">КРОУ</abbr> «Служба спасения» - Ведущий специалист</div>
-                        <div class="work-item__description">Сентябрь 2013 - Сентябрь 2015</div>
-                      </div>
+                <div class="personal-info__worksheet">
+                  <ul class="worksheet-list">
+                    <li class="worksheet-item">
+                      <div class="worksheet-what">Меня зовут:</div>
+                      <div class="worksheet-info">Ачкасов Георгий Леонидович</div>
                     </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="content-box">
-                <div class="content-box__header">Образование</div>
-                <div class="content-box__work-list">
-                  <ul class="work-list">
-                    <li class="work-item work-item_education">
-                      <div class="work-item__body">
-                        <div class="work-item__header">Бакалавр прикладной математики и информатики (кафедра прикладной математики) - <abbr title="Кубанский Государственный Университет">КубГУ</abbr> </div>
-                        <div class="work-item__description">2009-2013</div>
-                      </div>
+                    <li class="worksheet-item">
+                      <div class="worksheet-what">Мой возраст:</div>
+                      <div class="worksheet-info">24 года</div>
                     </li>
-                    <li class="work-item work-item_education">
-                      <div class="work-item__body">
-                        <div class="work-item__header">Магистр прикладной математики и информатики (кафедра прикладной математики) - <abbr title="Кубанский Государственный Университет">КубГУ</abbr></div>
-                        <div class="work-item__description">2013-2015</div>
+                    <li class="worksheet-item">
+                      <div class="worksheet-what">Мой город:</div>
+                      <div class="worksheet-info">Санкт-Петербург, Россия</div>
+                    </li>
+                    <li class="worksheet-item">
+                      <div class="worksheet-what">Моя специализация:</div>
+                      <div class="worksheet-info">FRONTEND разработчик</div>
+                    </li>
+                    <li class="worksheet-item">
+                      <div class="worksheet-what">Ключевые навыки:</div>
+                      <div class="worksheet-info">
+                        <ul class="skills-list">
+                          <li class="skills-item">html</li>
+                          <li class="skills-item">css</li>
+                          <li class="skills-item">javascript</li>
+                          <li class="skills-item">gulp</li>
+                          <li class="skills-item">git</li>
+                        </ul>
                       </div>
                     </li>
                   </ul>
@@ -169,34 +152,62 @@
               </div>
             </div>
           </div>
+
+          <!--Блок "Опыт работы"-->
+          <div class="content-box">
+            <div class="content-box__header">Опыт работы</div>
+            <div class="content-box__body">
+              <ul class="work-list">
+                <li class="work-item work-item_job">
+                  <div class="work-item__body">
+                    <div class="work-item__header">
+                      <abbr title="Краснодарское региональное общественное учреждение">КРОУ</abbr> «Служба спасения» - Ведущий специалист</div>
+                    <div class="work-item__description">Сентябрь 2013 - Сентябрь 2015</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--Блок "Образование"-->
+          <div class="content-box">
+            <div class="content-box__header">Образование</div>
+            <div class="content-box__body">
+              <ul class="work-list">
+                <li class="work-item work-item_education">
+                  <div class="work-item__body">
+                    <div class="work-item__header">Бакалавр прикладной математики и информатики<br>(кафедра прикладной математики) - <abbr title="Кубанский Государственный Университет">КубГУ</abbr> </div>
+                    <div class="work-item__description">2009-2013</div>
+                  </div>
+                </li>
+                <li class="work-item work-item_education">
+                  <div class="work-item__body">
+                    <div class="work-item__header">Магистр прикладной математики и информатики<br>(кафедра прикладной математики) - <abbr title="Кубанский Государственный Университет">КубГУ</abbr></div>
+                    <div class="work-item__description">2013-2015</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </section>
-      <!-- end-content -->
-    
+      </div>
+    </section>
+    <!--end-MAIN-CONTENT-->
+
     <!-- FOOTER -->
-      <footer class="section section_footer">
-        <div class="section__content_footer">
-          <div class="wrap grid">
-            <div class="footer__lock grid__col grid__col--1-of-12">
-              <a href="#" class="lock-inner"></a>
-            </div>
-            <div class="footer__copyright grid__col grid__col--11-of-12">
-              © 2016. Это мой сайт, пожалуйста, не копируйте и не воруйте его
-            </div>
+    <footer class="footer">
+      <div class="container clearfix">
+        <div class="footer__body">
+          <div class="lock">
+            <a href="login-form.html" class="lock-inner"></a>
+          </div>
+          <div class="copyright">
+            © 2016. Это мой сайт, пожалуйста, не копируйте и не воруйте его
           </div>
         </div>
-      </footer>
-      <!-- end-footer -->
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+      </div>
+    </footer>
+    <!-- end-FOOTER -->
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

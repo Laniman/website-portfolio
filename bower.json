@@ -3,7 +3,9 @@
   "private": true,
   "dependencies": {
     "jquery": "~2.1.1",
-    "normalize-css": "^4.1.1"
+    "normalize-css": "^4.1.1",
+    "qtip2": "^2.2.1",
+    "bPopup": "bpopup#^0.11.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

@@ -19,6 +19,13 @@ $fg:               $gray-lighter !default;
 
 $border-radius-base:        3px !default;
 
+
+//Media queries breakpoints
+$screen-xs: 480px; //мобильная
+$screen-sm: 768px; //планшет
+$screen-md: 992px;
+$screen-lg: 1200px;
+
 // Navbar
 
 // Basics of a navbar

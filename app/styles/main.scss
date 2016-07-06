@@ -253,7 +253,7 @@ html {
 }
 
 .navigation{
-  @media (max-width: 768px) {
+  @media (max-width: $screen-sm) {
     position: absolute;
     right: 0;
     display: block;
@@ -354,6 +354,10 @@ html {
   float: right;
   max-width: 650px;
   width: 100%;
+
+  @media (max-width: $screen-sm) {
+    float: none;
+  }
 
 }
 

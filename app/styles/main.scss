@@ -154,6 +154,14 @@ html {
   background-color: $fg;
   margin-bottom: 40px;
 
+  @media (max-width: $screen-sm) {
+    margin-bottom: 15px;
+  }
+  @media (max-width: $screen-xs) {
+    margin-bottom: 5px;
+  }
+
+
   &:after{
     content: '';
     display: block;
@@ -167,10 +175,40 @@ html {
   max-width: 1200px;
   margin: 0 auto;
   padding: 35px 0;
+
+  @media (max-width: $screen-sm) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  @media (max-width: $screen-xs) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .header__logo{
   float: left;
+
+  @media (max-width: $screen-sm) {
+    width: 166px;
+  }
+
+  @media (max-width: $screen-xs) {
+    width: 120px;
+  }
+
+}
+
+.logo{
+
+}
+
+.logo-img{
+  width: 100%;
+  height: auto;
 }
 
 .header__socials{
@@ -179,6 +217,11 @@ html {
 
 .socials{
   font-size: 0;
+  text-align: center;
+
+  @media (max-width: $screen-xs) {
+    margin-bottom: 20px;
+  }
 }
 
 .socials-item{
@@ -212,18 +255,80 @@ html {
   }
 }
 
-.mobile-nav{
-  color: #00DD00;
-  float: right;
+.header__burger{
   display: none;
-  //display: table-cell;
-  height: 47px;
-  line-height: 47px;
-  width: 47px;
-  vertical-align: middle;
-  text-align: center;
+  float: right;
+  font-size: 0;
+  padding-bottom: 13.5px;
+  padding-top: 13.5px;
   margin-left: 50px;
-  position: relative; //for absolute position of navigation
+
+  @media (max-width: $screen-sm) {
+    display: inline-block;
+  }
+
+  @media (max-width: $screen-xs) {
+    margin: 0;
+  }
+}
+
+.burger{
+  color: #fff;
+  //background-color: #666;
+  //padding: 5px;
+  position: relative;
+  display: inline-block;
+  //top: 5px;
+  //left: 5px;
+  cursor: pointer;
+  //transition: left .23s;
+  //z-index: 3;
+  width: 25px;
+  //-webkit-transform: translateZ(0);
+  //-webkit-backface-visibility: hidden;
+}
+
+.band-burg{
+  display: block;
+  height: 5px;
+  background-color: $burger-background-color;
+  //margin: 3px 0 0;
+  transition: all .1s linear .23s;
+  position: relative;
+  border-radius: 4px;
+}
+
+.band-burg-1{
+  top: 0;
+  transition: transform 0.2s, top 0.1s;
+}
+
+.band-burg-2{
+  top: 3px;
+  transition: transform 0.2s, top 0.1s;
+  transition-delay: 0.2s, 0s;
+}
+
+.band-burg-3{
+  top: 6px;
+  transition: all 0.2s;
+  transition-delay: 0.1s;
+}
+
+.burger.active{
+  .band-burg-1{
+    top: 8px;
+    transform: rotate(135deg);
+  }
+  .band-burg-2{
+    // top: 10px;
+    transform: rotate(-135deg);
+  }
+  .band-burg-3{
+    opacity: 0;
+    // top: 0;
+    transform: rotate(360deg);
+  }
 }
 
 /*            *\
@@ -233,6 +338,15 @@ html {
 .main{
   flex: 1;
   margin-bottom: 40px;
+
+  @media (max-width: $screen-sm) {
+    padding: 20px;
+  }
+
+  @media (max-width: $screen-xs) {
+    padding: 10px;
+  }
+
 }
 
 .container{
@@ -253,10 +367,39 @@ html {
 }
 
 .navigation{
+
+  &_active{
+
+  }
+
   @media (max-width: $screen-sm) {
     position: absolute;
     right: 0;
-    display: block;
+    top: 70px;
+    width: 238px;
+    box-shadow: 0.6px 2.9px 8.5px 0.5px rgba(13, 16, 7, 0.35);
+    //box-shadow: 1px 2px 3px 11px red;
+
+    &:after{
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 1px;
+      right: 18px;
+      transform: translate(0%,-100%);
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid $navbar-default-color;
+    }
+  }
+
+  @media (max-width: $screen-xs) {
+    position: absolute;
+    width: 100%;
+    &:after {
+      content: none;
+    }
   }
 }
 
@@ -268,6 +411,19 @@ html {
   background-color: $navbar-default-bg;
   font-family: fira_sansbook;
   font-size: 21px;
+
+
+
+
+
+  @media (max-width: $screen-sm) {
+    background-color: white;
+    text-align: left;
+    position: relative;
+    margin-bottom: 0;
+    font-size: 20px;
+
+  }
 }
 
 .navigation-item{
@@ -278,6 +434,10 @@ html {
     .navigation-link{
       color: $navbar-default-link-active-color;
       font-size: 23px;
+
+      @media (max-width: $screen-sm) {
+        font-size: 22px;
+      }
     }
   }
 }
@@ -286,15 +446,15 @@ html {
   display: block;
   text-decoration: none;
   color: $navbar-default-link-color;
-  margin: 0 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 20px 0 20px 18px;
   border-bottom: 2px solid $navbar-item-underline-bg;
   margin-bottom: -2px;
 }
 
 .contacts{
-  color: white;
-  font-style: normal;
+
   vertical-align: middle;
   border-radius: $border-radius-base;
   overflow: hidden;
@@ -304,6 +464,14 @@ html {
     padding-left: 20px;
     font-size: 21px;
   }
+
+  &__body{
+    @media (max-width: $screen-sm) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
   &__mail{
     background-color: $contacts-mail-bg;
     &:before{
@@ -330,11 +498,17 @@ html {
 .contacts-item{
   padding: 0 20px;
   line-height: 40px;
+  color: white;
+  font-style: normal;
 
   &:before{
     margin-right: 10px;
     display: inline-block;
     vertical-align: middle;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding: 0;
   }
 }
 
@@ -355,8 +529,15 @@ html {
   max-width: 650px;
   width: 100%;
 
+  @media (max-width: $screen-md) {
+    width: calc(100% - 270px);
+  }
+
   @media (max-width: $screen-sm) {
+    width: 100%;
     float: none;
+    max-width: 700px;
+    margin: 0 auto;
   }
 
 }
@@ -380,10 +561,23 @@ html {
     color: $content-box-header-color;
     border-bottom: 2px solid $content-box-header-underline-bg;
     font-size: $content-box-header-font-size;
+
+    @media (max-width: $screen-xs) {
+      padding: 10px;
+      font-size: 22px;
+      border-bottom: none;
+      text-align: center;
+      display: block;
+    }
   }
 
   &__body{
     padding: 25px 25px 25px 25px;
+
+    @media (max-width: $screen-xs) {
+      padding: 15px;
+      text-align: center;
+    }
   }
 }
 
@@ -391,11 +585,26 @@ html {
   display: flex;
   max-width: 540px;
   margin: 0 auto;
+
+  @media (max-width: $screen-sm) {
+    max-width: 100%;
+  }
+
+  @media (max-width: $screen-xs) {
+    flex-direction: column;
+
+  }
 }
 
 .personal-info__avatar{
   font-size: 0;
   margin-top: 20px;
+
+  @media (max-width: $screen-xs) {
+    //text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
 }
 
 .avatar{
@@ -416,6 +625,11 @@ html {
 
 .personal-info__worksheet{
   margin-left: 23px;
+
+  @media (max-width: $screen-xs) {
+    margin-left: 0;
+    //text-align: center;
+  }
 }
 
 .worksheet-list{
@@ -430,11 +644,19 @@ html {
   &:last-child{
     margin-bottom: 0;
   }
+
+  @media (max-width: $screen-xs) {
+    flex-direction: column;
+  }
 }
 
 .worksheet-what{
   margin-right: 18px;
   font-family: fira_sansmedium;
+
+  @media (max-width: $screen-xs) {
+    margin-right:0;
+  }
 }
 
 .worksheet-info{
@@ -444,6 +666,11 @@ html {
 .skills-list{
   margin: 0;
   padding: 0;
+
+  @media (max-width: $screen-xs) {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
 .skills-item{
@@ -457,6 +684,12 @@ html {
   cursor: default;
   font-family: ProximaNovaCond;
   font-size: 14px;
+
+  @media (max-width: $screen-xs) {
+    float: none;
+    display: inline-block;
+
+  }
 }
 
 .content-box__work-list{
@@ -464,7 +697,7 @@ html {
 }
 
 .work-list{
-  margin: 0;
+  //margin: 0;
   padding: 0;
   max-width: 540px;
   margin: 0 auto;
@@ -474,10 +707,24 @@ html {
   display: flex;
   align-items: center;
   margin-bottom: 22px;
+
   &:before{
     flex-shrink: 0;
   }
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $screen-xs) {
+    flex-direction: column;
+  }
+
   &_job{
+
+
+
+
     &:before{
       content: '';
       display: inline-block;
@@ -496,12 +743,19 @@ html {
   
   &__body{
       margin-left: 20px;
-      
       font-size: 15px;
+
+    @media (max-width: $screen-xs) {
+      margin:0;
+    }
   }
 
   &__header{
     font-size: 17px;
+
+    @media (max-width: $screen-xs) {
+      margin-top: 15px;
+    }
   }
 
   &__description{
@@ -530,11 +784,21 @@ html {
 
 .footer__body{
   padding: 22px 0;
+
+  @media (max-width: $screen-xs) {
+    padding: 10px 0;
+  }
 }
 
 .lock{
   float: left;
   font-size: 0;
+  padding: 0 10px;
+
+  @media (max-width:$screen-xs) {
+    float: none;
+  }
+
 }
 
 .lock-inner{
@@ -553,6 +817,12 @@ html {
   vertical-align: middle;
   display: inline-block;
   line-height: 32px;
+
+  @media (max-width: $screen-xs) {
+    line-height: normal;
+    font-size: 11px;
+    margin-top: 10px;
+  }
 }
 
 

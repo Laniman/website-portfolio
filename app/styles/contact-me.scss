@@ -15,16 +15,38 @@
 
   margin: 0;
   padding: 30px;
+
+  @media (max-width: $screen-xs) {
+    font-size: 19px;
+    padding: 20px;
+  }
 }
 
 .aboutbox-body{
   padding: 45px 120px 190px;
   text-align: left;
   background-color: #eff3f7;
+
+  @media (max-width: $screen-md) {
+    padding: 45px 70px 120px;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding: 45px 60px 90px;
+  }
+
+  @media (max-width: $screen-xs) {
+    padding: 10px;
+  }
 }
 
 .form-group{
   min-width: 47.5%;
+
+  @media (max-width: $screen-xs) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 .captcha-wrap{
@@ -51,11 +73,23 @@
   button[type='submit']{
     float: left;
     width: auto;
+
+    @media (max-width: $screen-xs) {
+      width: 47.5%;
+      padding: 0 5px;
+      font-size: 16px;
+    }
   }
 
   button[type="reset"]{
     float: right;
     width: auto;
+
+    @media (max-width: $screen-xs) {
+      width: 47.5%;
+      padding: 0 5px;
+      font-size: 16px;
+    }
   }
 }
 

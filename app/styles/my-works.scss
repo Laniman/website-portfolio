@@ -10,6 +10,10 @@
   justify-content: flex-start;
   align-items: flex-start;
   overflow: auto;
+
+  @media (max-width: $screen-sm) {
+    justify-content: space-around;
+  }
 }
 
 .thumbnail{
@@ -18,6 +22,19 @@
   padding: 0 10px;
   width: 33.3333333%;
   margin-bottom: 40px;
+
+  @media (max-width: $screen-sm) {
+    width: 50%;
+    max-width: 230px;
+    //padding: 0 50px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $screen-xs) {
+    width: 100%;
+    max-width: 210px;
+    padding: 0 10px;
+  }
 
   &__site-preview{
     text-align: center;
@@ -130,11 +147,13 @@
 
 #new-project-popup{
   display: none;
+  max-width: 362px;
+  width: 95%;
 }
 
 .modal-wrapper{
   font-family: fira_sansbook;
-  width: 362px;
+
 }
 
 .modal-header{

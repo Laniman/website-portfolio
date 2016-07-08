@@ -28,10 +28,24 @@
   border-bottom: 15px solid #67dffa;
   font-size: 40px;
   padding: 25px 0;
+
+
+
+  @media (max-width: $screen-xs) {
+    font-size: 24px;
+  }
 }
 
 .authorization-body{
   padding: 28px 83px 23px 83px;
+
+  @media (max-width: $screen-sm) {
+    padding: 28px 38px 35px;
+  }
+
+  @media (max-width: $screen-xs) {
+    padding: 16px 23px 20px;
+  }
 }
 
 .form-line{
@@ -44,15 +58,29 @@
 
 .label-big{
   font-size: 36px;
+
+  @media (max-width: $screen-xs) {
+    font-size: 21px;
+  }
 }
 
 .input-big{
   font-size: 17px;
   padding: 10px;
+
+  @media (max-width: $screen-xs) {
+    font-size: 15px;
+    padding: 5px;
+  }
 }
 
 .btn{
   font-size: 36px;
   max-width: 226px;
+
+  @media (max-width: $screen-xs) {
+    font-size: 21px;
+    max-width: 133px;
+  }
 }
 

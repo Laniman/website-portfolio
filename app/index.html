@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="/bower_components/qtip2/jquery.qtip.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -92,7 +98,7 @@
             </div>
             <div class="contacts__body">
               <div class="contacts-item contacts__mail">
-                <a href="mailto:georgij-net@yandex.ru?subject=Тема сообщения&body=Здравсвуйте, " class="link-to-connection">
+                <a href="mailto:georgij-net@yandex.ru" class="link-to-connection">
                   georgij-net@yandex.ru
                 </a>
               </div>
@@ -120,7 +126,7 @@
               <div class="personal-info">
                 <div class="personal-info__avatar">
                   <div class="avatar">
-                    <img src="images/face.JPG" alt="user photo" class="avatar__img">
+                    <img src="images/face.jpg" alt="user photo" class="avatar__img">
                   </div>
                 </div>
                 <div class="personal-info__worksheet">
@@ -220,8 +226,7 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/ev-emitter/ev-emitter.js"></script>
     <script src="/bower_components/imagesloaded/imagesloaded.js"></script>
-    <script src="/bower_components/qtip2/jquery.qtip.js"></script>
-    <script src="/bower_components/qtip2/basic/jquery.qtip.js"></script>
+    <script src="/bower_components/qtip2/jquery.qtip.min.js"></script>
     <script src="/bower_components/bPopup/jquery.bpopup.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
@@ -234,7 +239,6 @@
     <script src="scripts/add-project.js"></script>
     <script src="scripts/road-from-input-file.js"></script>
     <script src="scripts/adaptive.js"></script>
-
     <!-- endbuild -->
   </body>
 </html>

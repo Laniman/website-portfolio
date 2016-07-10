@@ -28,23 +28,38 @@
 
     <!-- HEADER -->
     <header class="header">
-      <div class="container-big clearfix">
-        <div class="header__logo">
-          <a class="logo">
-            <img src="images/logo.png" alt="logo" class="logo-img">
-          </a>
+        <div class="container-big clearfix">
+
+            <!--Блок логотипа-->
+            <div class="header__logo">
+                <a class="logo">
+                    <img src="images/logo.png" alt="logo" class="logo-img">
+                </a>
+            </div>
+
+            <!--Скрытый -->
+            <div class="header__burger">
+          <span class="burger">
+            <span class="band-burg band-burg-1"></span>
+            <span class="band-burg band-burg-2"></span>
+            <span class="band-burg band-burg-3"></span>
+          </span>
+            </div>
+
+
+            <!--Блок соц. кнопок-->
+            <div class="header__socials">
+                <ul class="socials">
+                    <li class="socials-item">
+                        <a href="https://new.vk.com/id36748150" class="socials-link socials-link-vk" target="_blank"></a>
+                    </li>
+                    <li class="socials-item">
+                        <a href="https://github.com/Laniman" class="socials-link socials-link-gh" target="_blank"></a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
-        <div class="header__socials">
-          <ul class="socials">
-            <li class="socials-item">
-              <a href="https://new.vk.com/id36748150" class="socials-link socials-link-vk" target="_blank"></a>
-            </li>
-            <li class="socials-item">
-              <a href="https://github.com/Laniman" class="socials-link socials-link-gh" target="_blank"></a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </header>
     <!-- end-HEADER -->
 
@@ -121,7 +136,7 @@
                             </div>
 
                             <div class="thumbnail">
-                                <div class="thumbnail__site-preview"><img src="images/site-preview-notify.png" alt="" class="site-preview__img"></div>
+                                <div class="thumbnail__site-preview"><img src="images/site-preview-notify.jpg" alt="" class="site-preview__img"></div>
                                 <div class="thumbnail__site-name">www.site.ru</div>
                                 <div class="thumbnail__site-description">Информация о проекте</div>
                             </div>
@@ -207,17 +222,19 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/ev-emitter/ev-emitter.js"></script>
     <script src="/bower_components/imagesloaded/imagesloaded.js"></script>
-    <script src="/bower_components/qtip2/jquery.qtip.js"></script>
-    <script src="/bower_components/qtip2/basic/jquery.qtip.js"></script>
+    <script src="/bower_components/qtip2/jquery.qtip.min.js"></script>
     <script src="/bower_components/bPopup/jquery.bpopup.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/validation.js"></script>
+    <script src="scripts/contact-me.js"></script>
+    <script src="scripts/login-form.js"></script>
     <script src="scripts/add-project.js"></script>
     <script src="scripts/road-from-input-file.js"></script>
-    <script src="scripts/validation.js"></script>
+    <script src="scripts/adaptive.js"></script>
     <!-- endbuild -->
   </body>
 </html>

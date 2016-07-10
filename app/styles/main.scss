@@ -176,6 +176,7 @@ html {
   margin: 0 auto;
   padding: 35px 0;
 
+
   @media (max-width: $screen-sm) {
     padding-left: 20px;
     padding-right: 20px;
@@ -194,16 +195,15 @@ html {
 
   @media (max-width: $screen-sm) {
     width: 166px;
+    margin-top: 10px;
   }
 
   @media (max-width: $screen-xs) {
     width: 120px;
   }
-
 }
 
 .logo{
-
 }
 
 .logo-img{
@@ -379,6 +379,7 @@ html {
     width: 238px;
     box-shadow: 0.6px 2.9px 8.5px 0.5px rgba(13, 16, 7, 0.35);
     //box-shadow: 1px 2px 3px 11px red;
+    z-index: 9999;
 
     &:after{
       content: '';

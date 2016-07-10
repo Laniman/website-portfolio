@@ -10,5 +10,10 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.5.3"
+  },
+  "overrides": {
+    "qtip2": {
+      "main": ["jquery.qtip.min.css", "jquery.qtip.min.js"]
+    }
   }
 }

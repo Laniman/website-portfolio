@@ -5,7 +5,7 @@ const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const spritesmith = require('gulp.spritesmith');
-const merge = require('merge-stream')
+const merge = require('merge-stream');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
